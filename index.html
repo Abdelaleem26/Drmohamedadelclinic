@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>د. محمد عادل مخلوف | باطنة وجهاز هضمي وأطفال | أجا، الدقهلية</title>
+  <meta name="description" content="عيادة د. محمد عادل مخلوف، أخصائي الباطنة والجهاز الهضمي والأطفال في صهرجت الصغرى، أجا. كل يوم من ٦ مساءً لـ ١٢ بالليل. الكشف مجاناً لغير القادرين.">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- المتغيرات ---------- */
+    :root {
+      --teal: #17524e;        /* لون الشعار */
+      --teal-deep: #0d3a37;
+      --teal-mid: #2d7a73;
+      --teal-soft: #dfeae7;
+      --heart: #b0352b;       /* أحمر القلب في الشعار، للحجز بس */
+      --heart-dark: #922a21;
+      --ivory: #f8f4ec;
+      --sand: #efe8da;
+      --ink: #1b2927;
+      --muted: #5b6a67;
+      --line: #d9d0bf;
+      --wa: #1d8248;
+      --radius: 10px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      font-size: 17px;
+      line-height: 1.9;
+      color: var(--ink);
+      background: var(--ivory);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    h1, h2, h3 { font-family: 'El Messiri', serif; line-height: 1.3; font-weight: 700; }
+    .wrap { width: min(1160px, 90%); margin-inline: auto; }
+    section { padding: 104px 0; }
+    :focus-visible { outline: 3px solid var(--teal-mid); outline-offset: 3px; }
+
+    /* ---------- الهيدر ---------- */
+    header {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(248, 244, 236, .96);
+      border-bottom: 1px solid var(--line);
+    }
+    .bar { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand img { width: 46px; height: 46px; object-fit: contain; }
+    .brand b { font-family: 'El Messiri', serif; font-size: 19px; display: block; line-height: 1.25; color: var(--teal-deep); }
+    .brand small { color: var(--muted); font-size: 13px; line-height: 1.4; display: block; }
+    nav { display: flex; gap: 32px; font-size: 16px; font-weight: 500; }
+    nav a { text-decoration: none; color: var(--ink); padding: 6px 0; border-bottom: 2px solid transparent; }
+    nav a:hover { color: var(--teal); border-color: var(--heart); }
+    .call-top {
+      background: var(--teal); color: #fff; text-decoration: none; font-weight: 700;
+      padding: 9px 22px; border-radius: 6px; font-size: 15px; white-space: nowrap;
+    }
+    .call-top:hover { background: var(--teal-deep); }
+    .menu-btn { display: none; background: none; border: 1px solid var(--line); border-radius: 8px; width: 42px; height: 42px; cursor: pointer; }
+    .menu-btn span { display: block; width: 18px; height: 2px; background: var(--ink); margin: 4px auto; }
+
+    /* ---------- الأزرار ---------- */
+    .btn {
+      display: inline-block; text-decoration: none; font-weight: 700; font-family: inherit; font-size: 16px; line-height: 1.4;
+      padding: 13px 28px; border-radius: 6px; border: 1.5px solid transparent; cursor: pointer; transition: background .2s, color .2s, border-color .2s;
+    }
+    .btn-red { background: var(--heart); color: #fff; }
+    .btn-red:hover { background: var(--heart-dark); }
+    .btn-wa { background: var(--wa); color: #fff; }
+    .btn-wa:hover { background: #166a3a; }
+    .btn-line { border-color: currentColor; background: transparent; }
+    .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* ---------- الهيرو ---------- */
+    .hero { background: var(--teal-deep); color: #fff; padding: 72px 0 0; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 72px; align-items: center; padding-bottom: 72px; }
+    .tag { display: inline-block; border: 1px solid rgba(255, 255, 255, .3); border-radius: 4px; padding: 2px 14px; font-size: 14px; color: #cfe3df; margin-bottom: 22px; }
+    .hero h1 { font-size: clamp(38px, 5.4vw, 62px); line-height: 1.2; margin-bottom: 20px; }
+    .hero p.lead { font-size: 20px; line-height: 1.9; color: #c4d9d5; max-width: 28em; margin-bottom: 34px; }
+    .hero .btn-line { color: #fff; border-color: rgba(255, 255, 255, .5); }
+    .hero .btn-line:hover { background: #fff; color: var(--teal-deep); border-color: #fff; }
+    .portrait { position: relative; max-width: 440px; width: 100%; margin-inline: auto; }
+    .portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 6px; }
+    .portrait::before { content: ''; position: absolute; inset: 16px 16px -16px -16px; border: 1px solid rgba(255, 255, 255, .35); border-radius: 6px; }
+    .portrait img { position: relative; }
+
+    .facts { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255, 255, 255, .18); }
+    .facts li { padding: 24px 0 26px; padding-inline-end: 24px; font-size: 17px; line-height: 1.6; }
+    .facts li + li { padding-inline-start: 28px; border-inline-start: 1px solid rgba(255, 255, 255, .18); }
+    .facts small { display: block; font-size: 13px; color: #8fb7b1; margin-bottom: 4px; letter-spacing: .3px; }
+
+    /* ---------- عناوين الأقسام ---------- */
+    .head { margin-bottom: 52px; max-width: 36em; }
+    .head h2 { font-size: clamp(30px, 4vw, 42px); color: var(--teal-deep); }
+    .head p { color: var(--muted); margin-top: 8px; }
+    .head .rule { width: 44px; height: 3px; background: var(--heart); margin-top: 18px; }
+
+    /* ---------- عن الدكتور ---------- */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 88px; align-items: start; }
+    .creds { list-style: none; margin: 0 0 32px; border-top: 1px solid var(--line); }
+    .creds li { padding: 16px 0; border-bottom: 1px solid var(--line); font-weight: 500; }
+    .creds small { display: block; color: var(--muted); font-size: 14px; font-weight: 400; line-height: 1.6; }
+    .about p + p { margin-top: 14px; }
+    .about-text p { color: #34433f; }
+    .principles { list-style: none; counter-reset: p; }
+    .principle { counter-increment: p; display: grid; grid-template-columns: 44px 1fr; column-gap: 8px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+    .principle:first-child { padding-top: 4px; }
+    .principle::before { content: counter(p, arabic-indic); font-family: 'El Messiri', serif; font-size: 26px; color: var(--heart); line-height: 1.3; grid-row: span 2; }
+    .principle h3 { font-size: 21px; color: var(--teal); }
+    .principle p { font-size: 16px; color: var(--muted); line-height: 1.8; margin-top: 2px; }
+
+    /* ---------- الخدمات ---------- */
+    .services { background: var(--sand); }
+    .svc-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 72px; border-top: 1px solid var(--line); }
+    .svc { display: grid; grid-template-columns: 52px 1fr; padding: 26px 0; border-bottom: 1px solid var(--line); align-content: start; }
+    .svc > * { grid-column: 2; }
+    .svc .n { grid-column: 1; grid-row: 1 / span 4; font-family: 'El Messiri', serif; font-size: 30px; color: var(--heart); line-height: 1.2; }
+    .svc h3 { font-size: 21px; color: var(--teal-deep); }
+    .svc p { font-size: 16px; color: var(--muted); line-height: 1.8; }
+    .svc .badge { justify-self: start; margin-top: 8px; font-size: 13px; background: var(--teal); color: #fff; border-radius: 4px; padding: 0 10px; line-height: 1.8; }
+    .svc a.wa { justify-self: start; color: var(--wa); font-weight: 700; font-size: 15px; margin-top: 6px; text-underline-offset: 4px; }
+    .equip { margin-top: 56px; display: flex; gap: 20px 40px; align-items: baseline; }
+    .equip h3 { font-size: 20px; color: var(--teal-deep); white-space: nowrap; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chips span { border: 1px solid #c9bfa9; background: var(--ivory); border-radius: 4px; padding: 2px 14px; font-size: 15px; line-height: 1.8; }
+
+    /* ---------- الشهادات ---------- */
+    .cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .cert { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: border-color .2s; }
+    .cert:hover { border-color: var(--teal-mid); }
+    .cert button { border: 0; padding: 12px 12px 0; background: #fff; cursor: zoom-in; display: block; width: 100%; }
+    .cert img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border: 1px solid var(--line); border-radius: 4px; }
+    .cert div { padding: 14px 16px 18px; }
+    .cert h3 { font-size: 16.5px; line-height: 1.55; font-family: 'Tajawal', sans-serif; font-weight: 700; color: var(--teal-deep); }
+    .cert p { font-size: 13.5px; color: var(--muted); line-height: 1.65; margin-top: 6px; }
+    .lightbox { position: fixed; inset: 0; background: rgba(8, 22, 21, .9); display: none; align-items: center; justify-content: center; z-index: 50; padding: 20px; cursor: zoom-out; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-height: 90vh; border-radius: 6px; }
+
+    /* ---------- المعرض ---------- */
+    .gallery-sec { padding-top: 0; }
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
+    .gallery img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); }
+    .gallery img:nth-child(2) { margin-top: 44px; }
+
+    /* ---------- التواصل ---------- */
+    .contact { background: var(--teal-deep); color: #fff; }
+    .contact .head h2 { color: #fff; }
+    .contact .head p { color: #b5cfcb; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 80px; align-items: start; }
+    .info dt { color: #8fb7b1; font-size: 14px; margin-top: 26px; }
+    .info dt:first-child { margin-top: 0; }
+    .info dd { font-size: 19px; line-height: 1.8; }
+    .info a { text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, .4); }
+    .info a:hover { border-color: #fff; }
+    .num { direction: ltr; unicode-bidi: embed; display: inline-block; letter-spacing: .5px; }
+    .help { background: var(--ivory); color: var(--ink); border-radius: 8px; padding: 36px; }
+    .help h3 { font-size: 26px; color: var(--teal-deep); margin-bottom: 6px; }
+    .help p { font-size: 16px; color: var(--muted); margin-bottom: 22px; }
+    .help .btns { margin-bottom: 28px; }
+    .warn { border-top: 1px solid var(--line); padding-top: 20px; font-size: 14.5px; color: var(--muted); line-height: 1.8; }
+    .warn strong { color: var(--heart); font-size: 15.5px; }
+    .warn ul { margin: 6px 0 0; padding-inline-start: 20px; }
+
+    footer { background: #092b29; color: #9fbdb9; padding: 24px 0; font-size: 14px; }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+    /* زرار واتساب ثابت للموبايل */
+    .float-wa { display: none; position: fixed; bottom: 16px; inset-inline-start: 16px; z-index: 30; background: var(--wa); color: #fff; text-decoration: none; font-weight: 700; padding: 12px 24px; border-radius: 6px; box-shadow: 0 6px 18px rgba(0, 0, 0, .28); }
+
+    /* ---------- تابلت ---------- */
+    @media (max-width: 1020px) {
+      .cert-grid { grid-template-columns: repeat(3, 1fr); }
+      .about-grid, .contact-grid { gap: 56px; }
+    }
+
+    /* ---------- موبايل ---------- */
+    @media (max-width: 860px) {
+      section { padding: 68px 0; }
+      nav { display: none; position: absolute; top: 72px; inset-inline: 0; flex-direction: column; gap: 0; background: var(--ivory); border-bottom: 1px solid var(--line); padding: 4px 5%; }
+      nav.open { display: flex; }
+      nav a { padding: 14px 0; border-bottom: 1px solid var(--line); }
+      .menu-btn { display: block; }
+      .call-top { display: none; }
+      .hero { padding-top: 40px; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 44px; }
+      .hero-grid { gap: 36px; padding-bottom: 44px; }
+      .portrait { order: -1; max-width: 320px; }
+      .portrait::before { inset: 12px 12px -12px -12px; }
+      .hero p.lead { font-size: 18px; }
+      .facts { grid-template-columns: 1fr; }
+      .facts li, .facts li + li { padding: 16px 0; border-inline-start: 0; }
+      .facts li + li { border-top: 1px solid rgba(255, 255, 255, .18); }
+      .head { margin-bottom: 36px; }
+      .svc-grid { grid-template-columns: 1fr; }
+      .equip { flex-direction: column; gap: 14px; }
+      .cert-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .cert h3 { font-size: 15px; }
+      .gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .gallery img:nth-child(2) { margin-top: 0; }
+      .gallery img:last-child { grid-column: span 2; aspect-ratio: 16 / 10; object-position: top; }
+      .help { padding: 28px 22px; }
+      .float-wa { display: block; }
+    }
+    @media (max-width: 480px) {
+      .cert-grid { grid-template-columns: 1fr; }
+      .btn { padding: 13px 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap bar">
+      <a href="#top" class="brand">
+        <img src="images/logo.jpg" alt="شعار عيادة د. محمد عادل مخلوف">
+        <span><b>د. محمد عادل مخلوف</b><small>باطنة وجهاز هضمي وأطفال</small></span>
+      </a>
+      <nav id="nav">
+        <a href="#about">عن الدكتور</a>
+        <a href="#services">الخدمات</a>
+        <a href="#certs">الشهادات</a>
+        <a href="#clinic">العيادة</a>
+        <a href="#contact">التواصل</a>
+      </nav>
+      <a class="call-top" href="tel:01029509995">اتصل بالعيادة</a>
+      <button class="menu-btn" id="menuBtn" aria-label="القائمة" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- الهيرو -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="tag">صهرجت الصغرى، أجا، الدقهلية</span>
+          <h1>د. محمد عادل مخلوف</h1>
+          <p class="lead">أخصائي الباطنة والجهاز الهضمي والأطفال. بنسمع للمريض الأول، ونشرحله كل خطوة في العلاج.</p>
+          <div class="btns">
+            <a class="btn btn-red" href="tel:01029509995">اتصل واحجز</a>
+            <a class="btn btn-wa" href="#" data-wa="مرحباً، أود حجز موعد في العيادة. ما هي المواعيد المتاحة؟">واتساب</a>
+            <a class="btn btn-line" href="#services">الخدمات</a>
+          </div>
+        </div>
+        <div class="portrait">
+          <img src="images/doctor.jpg" alt="د. محمد عادل مخلوف في مكتبه بالعيادة" width="640" height="640">
+        </div>
+      </div>
+      <div class="wrap">
+        <ul class="facts">
+          <li><small>المواعيد</small>العيادة مفتوحة كل يوم من ٦ مساءً لـ ١٢ بالليل</li>
+          <li><small>زيارات</small>زيارة منزلية للحالات الطارئة</li>
+          <li><small>الكشف</small>الكشف مجاناً لغير القادرين</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- عن الدكتور -->
+    <section id="about" class="about">
+      <div class="wrap about-grid">
+        <div class="about-text">
+          <div class="head">
+            <h2>عن الدكتور</h2>
+            <div class="rule"></div>
+          </div>
+          <ul class="creds">
+            <li>بكالوريوس الطب والجراحة<small>جامعة الأزهر بدمياط</small></li>
+            <li>زمالة أمراض الباطنة والحميات والأمراض المعدية</li>
+            <li>أكثر من ٥ سنين خبرة<small>باطنة عامة، أطفال، وأمراض مزمنة</small></li>
+          </ul>
+          <p>هدفنا إن العيلة كلها تلاقي رعاية آمنة وكاملة في مكان واحد، من الطفل لكبار السن. بنؤمن إن العلاج الصح بيبدأ بسماع كويس وتشخيص دقيق، وإن المتابعة المستمرة هي اللي بتفرق في رحلة التعافي.</p>
+          <p>ومعانا في العيادة، الكشف مجاناً لغير القادرين.</p>
+        </div>
+        <ul class="principles">
+          <li class="principle"><h3>التشخيص الأول</h3><p>بنفهم سبب الأعراض قبل ما نكتب أي علاج، عشان النتيجة تبقى ثابتة مش مؤقتة.</p></li>
+          <li class="principle"><h3>متابعة لحد التعافي</h3><p>بنتابع الحالة من أول الأعراض لحد ما تخف، وخصوصاً مرضى السكر والضغط والأمراض المزمنة.</p></li>
+          <li class="principle"><h3>الوقاية قبل العلاج</h3><p>توعية وفحوصات دورية، عشان نمسك أي مشكلة بدري.</p></li>
+          <li class="principle"><h3>المريض شريك في الخطة</h3><p>بنشرح لك التشخيص والدوا وليه بنكتبه، عشان تلتزم بالعلاج وانت فاهم.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- الخدمات: بتتملي من مصفوفة SERVICES في الجافاسكريبت تحت -->
+    <section id="services" class="services">
+      <div class="wrap">
+        <div class="head">
+          <h2>الخدمات</h2>
+          <p>كشف وعلاج للكبار والأطفال، وزيارات منزلية للي مش قادر يتحرك.</p>
+          <div class="rule"></div>
+        </div>
+        <div class="svc-grid" id="svcGrid"></div>
+        <div class="equip">
+          <h3>الأجهزة الموجودة في العيادة</h3>
+          <div class="chips">
+            <span>سونار</span><span>جهاز قياس السكر</span><span>جهاز قياس الضغط</span>
+            <span>جهاز قياس نسبة الأكسجين في الدم</span><span>ميزان طبي</span><span>جهاز قياس الطول</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- الشهادات -->
+    <section id="certs">
+      <div class="wrap">
+        <div class="head">
+          <h2>الشهادات والدورات</h2>
+          <p>دورات وورش عمل حضرها الدكتور في ٢٠٢٣. اضغط على أي شهادة لتكبيرها.</p>
+          <div class="rule"></div>
+        </div>
+        <div class="cert-grid" id="certGrid"></div>
+      </div>
+    </section>
+
+    <!-- صور العيادة -->
+    <section id="clinic" class="gallery-sec">
+      <div class="wrap">
+        <div class="head">
+          <h2>من جوه العيادة</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="gallery">
+          <img src="images/clinic-1.jpg" alt="مكتب الكشف في العيادة" loading="lazy">
+          <img src="images/clinic-2.jpg" alt="غرفة الكشف" loading="lazy">
+          <img src="images/clinic-3.jpg" alt="مدخل العيادة" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- التواصل -->
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div class="head">
+          <h2>الحجز والتواصل</h2>
+          <p>اتصل أو ابعت واتساب وهنحجزلك أقرب ميعاد.</p>
+          <div class="rule"></div>
+        </div>
+        <div class="contact-grid">
+          <dl class="info">
+            <dt>العنوان</dt>
+            <dd>صهرجت الصغرى، أجا، الدقهلية<br>شارع الهايبر، جنب استوديو الأهرام<br>
+              <a href="https://maps.app.goo.gl/46drB4PY8KDYq88n6" target="_blank" rel="noopener" style="font-size:16px">افتح على الخريطة</a></dd>
+            <dt>المواعيد</dt>
+            <dd>كل يوم من ٦ مساءً لـ ١٢ بالليل</dd>
+            <dt>التليفون وواتساب</dt>
+            <dd><a href="tel:01029509995" class="num">0102 950 9995</a></dd>
+            <dt>فيسبوك</dt>
+            <dd><a href="https://www.facebook.com/share/19AVubPMSf/?mibextid=wwXIfr" target="_blank" rel="noopener">صفحة العيادة</a></dd>
+          </dl>
+          <div class="help">
+            <h3>احجز ميعادك</h3>
+            <p>ابعت اسمك وسنك وشكوتك باختصار على واتساب، وهنرد عليك بالميعاد.</p>
+            <div class="btns">
+              <a class="btn btn-red" href="tel:01029509995">اتصل الآن</a>
+              <a class="btn btn-wa" href="#" data-wa="مرحباً، أود حجز موعد في العيادة. ما هي المواعيد المتاحة؟">حجز بالواتساب</a>
+            </div>
+            <div class="warn">
+              <strong>في الحالات الخطيرة</strong>
+              <ul>
+                <li>اتصل بالإسعاف على ١٢٣ أو روح أقرب مستشفى فوراً.</li>
+                <li>مثال: ضيق نفس شديد، ألم مفاجئ في الصدر، إغماء أو تشنجات، نزيف مش بيقف، أو حرارة عالية جداً عند طفل.</li>
+                <li>العيادة مش بديل للطوارئ في الحالات اللي بتهدد الحياة.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© ٢٠٢٥ عيادة د. محمد عادل مخلوف</span>
+      <span>الكشف مجاناً لغير القادرين</span>
+    </div>
+  </footer>
+
+  <a class="float-wa" href="#" data-wa="مرحباً، أود حجز موعد في العيادة. ما هي المواعيد المتاحة؟">واتساب</a>
+  <div class="lightbox" id="lightbox"><img alt="" id="lightboxImg"></div>
+
+  <script>
+    // رقم العيادة بصيغة دولية (للواتساب)
+    const WA_NUMBER = '201029509995';
+
+    // الخدمات. badge و wa اختياريين
+    const SERVICES = [
+      { t: 'باطنة وأطفال', d: 'كشف شامل وتشخيص دقيق لكل الأعمار.' },
+      { t: 'متابعة الأمراض المزمنة', d: 'متابعة منتظمة للسكر والضغط وأمراض القلب.' },
+      { t: 'الجهاز الهضمي', d: 'تشخيص وعلاج مشاكل المعدة والأمعاء والقولون.' },
+      { t: 'سونار', d: 'فحص بالسونار في العيادة نفسها.' },
+      { t: 'متابعة الوزن والطول', d: 'تقييم نمو الأطفال ومتابعته مع كل زيارة.' },
+      { t: 'الجدري المائي والأمراض المعدية', d: 'تشخيص وعلاج، مع التطعيمات الوقائية.', badge: 'أطفال وكبار' },
+      { t: 'زيارة منزلية طارئة', d: 'كشف وعلاج في البيت للحالات اللي مش قادرة تتحرك.', badge: 'للطوارئ', wa: 'السلام عليكم، أريد حجز زيارة منزلية طارئة' },
+      { t: 'زيارة منزلية إنسانية', d: 'كشف في البيت للحالات الإنسانية غير القادرة.', badge: 'لغير القادرين', wa: 'السلام عليكم، أريد حجز موعد منزلي لحالة إنسانية' }
+    ];
+
+    // الشهادات: الصورة، العنوان، التاريخ، المدرب
+    const CERTS = [
+      { img: 'cert-1', t: 'ورشة العلاقة بين الطبيب والمريض', d: '١١ مايو ٢٠٢٣، ساعتين', by: 'مكرم أحمد' },
+      { img: 'cert-4', t: 'الجوانب الطبية القانونية والتقرير الطبي', d: '٢٠ يونيو ٢٠٢٣، ساعتين', by: 'مدير مركز CEMT' },
+      { img: 'cert-5', t: 'أساسيات مكافحة العدوى', d: '٢٥ يوليو ٢٠٢٣، ساعتين', by: 'أ.د. عاطف وهدان' },
+      { img: 'cert-8', t: 'الجودة في المستشفيات والمؤسسات الصحية', d: '١٥ مايو ٢٠٢٣، ساعتين', by: 'أ.د. أحمد عمران' },
+      { img: 'cert-6', t: 'ندوة أونلاين: استراتيجيات الترويج والنمو', d: '٢٧ مايو ٢٠٢٣، ساعة', by: 'أ.د. رأفت يوسف' },
+      { img: 'cert-7', t: 'ورشة الإنعاش القلبي الرئوي: نصائح وحيل', d: '٢٦ يوليو ٢٠٢٣، ساعتين', by: 'أ.د. محمد سامي' },
+      { img: 'cert-2', t: 'التقييم والإدارة الأساسية للصدمات', d: '٢٢ يوليو ٢٠٢٣، ساعتين', by: 'أ.د. أحمد تولي رجب' },
+      { img: 'cert-3', t: 'دور التحاليل في إدارة مصابي الصدمات المتعددة', d: '٢٢ يوليو ٢٠٢٣، ساعتين', by: 'أ.د. طارق عمران' }
+    ];
+
+    const toAr = n => String(n).replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+    const waLink = text => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+
+    // رسم كروت الخدمات (textContent بس، من غير innerHTML على بيانات خارجية)
+    const svcGrid = document.getElementById('svcGrid');
+    SERVICES.forEach((s, i) => {
+      const card = document.createElement('article');
+      card.className = 'svc';
+      const num = document.createElement('span'); num.className = 'n'; num.textContent = toAr(i + 1);
+      const h = document.createElement('h3'); h.textContent = s.t;
+      const p = document.createElement('p'); p.textContent = s.d;
+      card.append(num, h, p);
+      if (s.badge) { const b = document.createElement('span'); b.className = 'badge'; b.textContent = s.badge; card.append(b); }
+      if (s.wa) {
+        const a = document.createElement('a'); a.className = 'wa'; a.textContent = 'احجز بالواتساب';
+        a.href = waLink(s.wa); a.target = '_blank'; a.rel = 'noopener'; card.append(a);
+      }
+      svcGrid.append(card);
+    });
+
+    // رسم الشهادات
+    const certGrid = document.getElementById('certGrid');
+    CERTS.forEach(c => {
+      const card = document.createElement('article'); card.className = 'cert';
+      const btn = document.createElement('button'); btn.type = 'button'; btn.setAttribute('aria-label', 'تكبير الشهادة');
+      const img = document.createElement('img'); img.src = `images/certs/${c.img}.jpg`; img.alt = 'شهادة: ' + c.t; img.loading = 'lazy';
+      btn.append(img);
+      const box = document.createElement('div');
+      const h = document.createElement('h3'); h.textContent = c.t;
+      const p = document.createElement('p'); p.textContent = `${c.d} | المحاضر: ${c.by}`;
+      box.append(h, p); card.append(btn, box); certGrid.append(card);
+      btn.addEventListener('click', () => openBox(img.src, img.alt));
+    });
+
+    // تكبير الشهادة
+    const box = document.getElementById('lightbox'), boxImg = document.getElementById('lightboxImg');
+    function openBox(src, alt) { boxImg.src = src; boxImg.alt = alt; box.classList.add('open'); }
+    box.addEventListener('click', () => box.classList.remove('open'));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') box.classList.remove('open'); });
+
+    // أزرار الواتساب (كل عنصر فيه data-wa)
+    document.querySelectorAll('[data-wa]').forEach(a => {
+      a.href = waLink(a.dataset.wa); a.target = '_blank'; a.rel = 'noopener';
+    });
+
+    // قائمة الموبايل
+    const nav = document.getElementById('nav'), menuBtn = document.getElementById('menuBtn');
+    menuBtn.addEventListener('click', () => menuBtn.setAttribute('aria-expanded', nav.classList.toggle('open')));
+    nav.addEventListener('click', e => { if (e.target.tagName === 'A') { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); } });
+  </script>
+</body>
+</html>
